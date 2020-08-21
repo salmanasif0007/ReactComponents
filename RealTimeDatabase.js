@@ -42,3 +42,20 @@
             ? todoList.map((todo) =>
             <Row key={todo.id} style={{marginTop:"10px"}}>
                     {todo.name.photoURL ?(
+                     
+                     
+                     
+                     
+                     
+             @@@@@@@@@   delete   @@@@@@@@
+                     
+                     
+                     
+                     
+                     
+function deleteButtonClicked(e) {
+    e.stopPropagation();
+    const userID = e.target.getAttribute("userid");
+    const userRef = dbRef.child('users/' + userID);
+    userRef.remove()
+}
